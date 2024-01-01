@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <h1 className="font-bold text-red-700">HEY</h1>
-      <h2>SHARAVAN</h2>
+      <h2>SHRAVAN</h2>
     </div>
   );
 }
