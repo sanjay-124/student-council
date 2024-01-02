@@ -25,7 +25,7 @@ const Header = () => {
             Contact
           </a>
           <a
-            href="/sign-up"
+            href="/signup"
             className="text-base font-semibold leading-6 text-gray-900 hover:-translate-y-0.5"
           >
             Sign Up <span aria-hidden="true"></span>

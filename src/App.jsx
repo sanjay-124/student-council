@@ -63,7 +63,7 @@ function App() {
                 </p>
                 <div className="pt-5">
                   <a
-                    href="/about-us"
+                    href="/aboutus"
                     className="font-semibold text-indigo-600 text-xl"
                   >
                     <span aria-hidden="true"></span>Learn more... <span aria-hidden="true"></span>
