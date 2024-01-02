@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Components/Header";
 import Footer from "./components/Footer";
 
+
 export default class Contact extends Component {
   render() {
     return (
