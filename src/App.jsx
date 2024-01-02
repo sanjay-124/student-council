@@ -5,7 +5,7 @@ import "./App.css";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore"; // Include the firestore module
-import Header from "./Components/Header";
+import Header from "./components/Header";
 
 const config = {
   apiKey:  import.meta.env.REACT_APP_APIKEY,
