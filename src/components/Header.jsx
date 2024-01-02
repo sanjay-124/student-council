@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({activePage}) => {
   return (
-    <div className="p-6">
+    <div className="p-6 sticky -z-9999">
       <nav className="flex items-center justify-between" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
@@ -11,22 +11,27 @@ const Header = () => {
           </a>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          <a
+        <a
             href="/feedback"
-            className="text-base font-semibold leading-6 text-gray-900 hover:-translate-y-0.5"
+            className={`text-base font-semibold leading-6 ${
+              activePage === 'feedback' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
+            } hover:-translate-y-0.5`}
           >
             Feedback
           </a>
-
           <a
             href="/contact"
-            className="text-base font-semibold leading-6 text-gray-900 hover:-translate-y-0.5"
+            className={`text-base font-semibold leading-6 ${
+                activePage === 'contact' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
+             } hover:-translate-y-0.5`}
           >
             Contact
           </a>
           <a
             href="/signup"
-            className="text-base font-semibold leading-6 text-gray-900 hover:-translate-y-0.5"
+            className={`text-base font-semibold leading-6 ${
+                activePage === 'signup' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
+             } hover:-translate-y-0.5`}
           >
             Sign Up <span aria-hidden="true"></span>
           </a>

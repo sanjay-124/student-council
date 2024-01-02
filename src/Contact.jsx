@@ -7,7 +7,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header activePage="contact"/>
         <div className="flex min-h-full flex-col bg-white lg:relative">
           <div className="flex flex-grow flex-col">
             <main className="flex flex-grow flex-col bg-white">

@@ -6,7 +6,7 @@ export default class AboutUs extends Component {
   render() {
     return (
       <div className="relative bg-white">
-        <Header />
+        <Header/>
         <div className="mx-auto max-w-7xl">
           <div className="flex relative z-10 lg:w-full lg:max-w-2xl">
             <svg

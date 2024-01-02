@@ -7,7 +7,7 @@ export default class Feedback extends Component {
     <div>
      <div>
         <div>
-        <Header/>
+        <Header activePage="feedback" />
         <div className="overflow-hidden py-16 px-6 lg:px-8 lg:py-10">
           <div className="relative mx-auto max-w-xl">
             <div className="text-center">
