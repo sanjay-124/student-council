@@ -25,15 +25,6 @@ export default class Contact extends Component {
                     info@cisb.org.in/enroll@cisb.org.in <br />
                     +918067594444 | +91 9845150395.
                   </p>
-                  <div className="mt-6">
-                    <a
-                      href="/"
-                      className="text-base font-medium text-indigo-600 hover:text-indigo-500"
-                    >
-                      Go back home
-                      <span aria-hidden="true"></span>
-                    </a>
-                  </div>
                 </div>
               </div>
             </main>

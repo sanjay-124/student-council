@@ -7,10 +7,18 @@ const Header = ({activePage}) => {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">HOME PAGE</span>
-            <img className="h-14" src="/public/favicon.png" alt="" />
+            <img className="h-14" src="/favicon.png" alt="" />
           </a>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
+        <a
+            href="/"
+            className={`text-lg font-semibold leading-6 ${
+              activePage === '/' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
+            } hover:-translate-y-0.5`}
+          >
+            Home
+            </a>
         <a
             href="/feedback"
             className={`text-lg font-semibold leading-6 ${
