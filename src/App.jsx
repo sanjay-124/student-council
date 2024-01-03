@@ -1,28 +1,14 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore"; // Include the firestore module
-import Header from "./components/Header";
-
-const config = {
-  apiKey:  import.meta.env.REACT_APP_APIKEY,
-  authDomain:  import.meta.env.REACT_APP_AUTHDOMAIN,
-  projectId:  import.meta.env.REACT_APP_PROJECTID,
-  storageBucket:  import.meta.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId:  import.meta.env.REACT_APP_MESSAGINGSENDERID,
-  appId:  import.meta.env.REACT_APP_APPID,
-};
-
-firebase.initializeApp(config);
-const db = firebase.firestore(); // Initialize Firestore
+import Header from "./component/Header";
 
 function App() {
-
   return (
-<div>
+    <div>
       <div className="isolate bg-white">
         <div className="absolute top-[-10rem] max-w-xl max-h-12 -z-20 blur-3xl sm:top-[-20rem]">
           <img
@@ -31,7 +17,7 @@ function App() {
           />
         </div>
         <div className="sticky -z-9999 top-0 left-0">
-          <Header activePage="/"/>
+          <Header activePage="/" />
           <nav>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="flex h-16 justify-center">
@@ -66,7 +52,8 @@ function App() {
                     href="/aboutus"
                     className="font-semibold text-indigo-600 text-xl"
                   >
-                    <span aria-hidden="true"></span>Learn more... <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>Learn more...{" "}
+                    <span aria-hidden="true"></span>
                   </a>
                 </div>
               </div>

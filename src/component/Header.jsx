@@ -1,6 +1,9 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React from "react";
 
-const Header = ({activePage}) => {
+import PropTypes from "prop-types";
+
+const Header = ({ activePage }) => {
   return (
     <div className="p-6 sticky -z-9999">
       <nav className="flex items-center justify-between" aria-label="Global">
@@ -11,18 +14,22 @@ const Header = ({activePage}) => {
           </a>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-        <a
+          <a
             href="/"
             className={`text-lg font-semibold leading-6 ${
-              activePage === '/' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
+              activePage === "/"
+                ? "border-indigo-500 border-b-2 text-gray-900"
+                : "text-gray-900"
             } hover:-translate-y-0.5`}
           >
             Home
-            </a>
-        <a
+          </a>
+          <a
             href="/feedback"
             className={`text-lg font-semibold leading-6 ${
-              activePage === 'feedback' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
+              activePage === "feedback"
+                ? "border-indigo-500 border-b-2 text-gray-900"
+                : "text-gray-900"
             } hover:-translate-y-0.5`}
           >
             Feedback
@@ -30,16 +37,20 @@ const Header = ({activePage}) => {
           <a
             href="/contact"
             className={`text-lg font-semibold leading-6 ${
-                activePage === 'contact' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
-             } hover:-translate-y-0.5`}
+              activePage === "contact"
+                ? "border-indigo-500 border-b-2 text-gray-900"
+                : "text-gray-900"
+            } hover:-translate-y-0.5`}
           >
             Contact
           </a>
           <a
             href="/signup"
             className={`text-lg font-semibold leading-6 ${
-                activePage === 'signup' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
-             } hover:-translate-y-0.5`}
+              activePage === "signup"
+                ? "border-indigo-500 border-b-2 text-gray-900"
+                : "text-gray-900"
+            } hover:-translate-y-0.5`}
           >
             Sign Up <span aria-hidden="true"></span>
           </a>
@@ -47,6 +58,10 @@ const Header = ({activePage}) => {
       </nav>
     </div>
   );
+};
+
+Header.propTypes = {
+  activePage: PropTypes.string.isRequired,
 };
 
 export default Header;
