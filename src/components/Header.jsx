@@ -13,7 +13,7 @@ const Header = ({activePage}) => {
         <div className="hidden lg:flex lg:gap-x-12">
         <a
             href="/feedback"
-            className={`text-base font-semibold leading-6 ${
+            className={`text-lg font-semibold leading-6 ${
               activePage === 'feedback' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
             } hover:-translate-y-0.5`}
           >
@@ -21,7 +21,7 @@ const Header = ({activePage}) => {
           </a>
           <a
             href="/contact"
-            className={`text-base font-semibold leading-6 ${
+            className={`text-lg font-semibold leading-6 ${
                 activePage === 'contact' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
              } hover:-translate-y-0.5`}
           >
@@ -29,7 +29,7 @@ const Header = ({activePage}) => {
           </a>
           <a
             href="/signup"
-            className={`text-base font-semibold leading-6 ${
+            className={`text-lg font-semibold leading-6 ${
                 activePage === 'signup' ? 'border-indigo-500 border-b-2 text-gray-900' : 'text-gray-900'
              } hover:-translate-y-0.5`}
           >

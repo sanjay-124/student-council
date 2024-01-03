@@ -16,11 +16,11 @@ export default function Apps() {
       <Routes>
         <Route path="/" element={<App/>}/>
         <Route path="/feedback" element={<Feedback/>}/>
-        <Route path="aboutus" element={<AboutUs/>}/>
-        <Route path="contact" element={<Contact/>}/>
-        <Route path="signup" element={<SignUp/>}/>
-        <Route path="announcements" element={<Announcements/>}/>
-        <Route path="events" element={<Events/>}/>
+        <Route path="/aboutus" element={<AboutUs/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/announcements" element={<Announcements/>}/>
+        <Route path="/events" element={<Events/>}/>
       </Routes>
     </BrowserRouter>
   );
