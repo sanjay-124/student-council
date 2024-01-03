@@ -22,7 +22,8 @@ import SignUp from "./pages/signup.jsx";
 import Announcements from "./pages/announcements.jsx";
 import Events from "./pages/events.jsx";
 import Admin from "./pages/admin.jsx";
-import FetchFeedback from "./pages/fetchfeedback.jsx";
+import SecondChamber from "./pages/secondchamber.jsx";
+import AdminFeedback from "./pages/adminfeedback.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,8 +59,12 @@ const router = createBrowserRouter([
     element: <Admin />,
   },
   {
-    path: "/fetchfeedback",
-    element: <FetchFeedback />,
+    path: "/secondchamber",
+    element: <SecondChamber />,
+  },
+  {
+    path:"/adminfeedback",
+    element:<AdminFeedback/>,
   },
 ]);
 

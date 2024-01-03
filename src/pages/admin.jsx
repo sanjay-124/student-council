@@ -57,7 +57,7 @@ const Admin = () => {
       </nav>
       <main>
         <div className="mx-auto max-w-lg justify-center">
-          <h2 className="text-5xl font-medium text-gray-600 text-center pt-[4rem] mt-6 leading-8">WELCOME BACK!</h2>
+          <h2 className="text-5xl font-medium text-gray-600 text-center pt-[4rem] mt-6">WELCOME BACK EXECUTIVES!</h2>
           <p className="mt-1 text-lg text-indigo-600 text-center pb-[6rem] font-semibold">STUDENT COUNCIL TEAM</p>
           <ul role="list" className="mt-6 divide-y divide-gray-200 border-t border-b border-gray-200">
             <li>
@@ -69,7 +69,7 @@ const Admin = () => {
                   </div>
                   <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden" id="AnnouncementsContainer">
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5 h-4/5 bg-white shadow-lg rounded-xl overflow-hidden" id="iframeWrapper">
-                      <iframe className="w-full h-full border-none" src="announcementsAdmin.html"></iframe>
+                      <iframe className="w-full h-full border-none" src="/adminannouncements"></iframe>
                     </div>
                   </div>
                   <p className="text-sm text-gray-500">Share Important Updates</p>

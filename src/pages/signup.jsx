@@ -26,13 +26,27 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      await firebase.auth().signInWithEmailAndPassword(email, password);
-      toast.success("Sign In successfull!");
+      // Sign in with email and password
+      const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+      const user = userCredential.user;
 
-      setEmail("");
-      setPassword("");
-
-      navigate("/admin");
+      // Check user's UID to determine admin page
+      if (user.uid === "eWuEqdPZhHcHDDKP0v0SzHzSjOq1" || user.uid === "6QmWbtIebWNrYwmSKMS7BW2L2zh2") {
+        // Navigate to secondchamber admin page
+        toast.success("Sign In successful!");
+        setEmail("");
+        setPassword("");
+        navigate("/secondchamber");
+      } else if (user.uid === "h8oos4NitYfHmszvX4ShKa72lXq1" || user.uid === "cgtAoZH0CQabibYSPpxppRcIgKK2") {
+        // Navigate to regular admin page
+        toast.success("Sign In successful!");
+        setEmail("");
+        setPassword("");
+        navigate("/admin");
+      } else {
+        // User doesn't have admin credentials
+        toast.error("You don't have permission to access the admin pages.");
+      }
     } catch (error) {
       toast.error(error.message);
     }

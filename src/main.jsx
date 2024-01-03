@@ -10,8 +10,9 @@ import Announcements from "./pages/announcements.jsx";
 import Events from "./pages/events.jsx";
 // import admin
 import Admin from "./pages/admin.jsx";
-import FetchFeedback from "./pages/fetchfeedback.jsx";
 import Home from "./Home.jsx";
+import SecondChamber from "./pages/secondchamber.jsx";
+import AdminFeedback from "./pages/adminfeedback.jsx";
 
 function Apps() {
   return (
@@ -26,7 +27,8 @@ function Apps() {
         <Route path="/events" element={<Events />} />
         {/* admin */}
         <Route path="/admin" element={<Admin />} />
-        <Route path="/fetchfeedback" element={<FetchFeedback />} />
+        <Route path="/secondchamber" element={<SecondChamber />} />
+        <Route path="/adminfeedback" element={<AdminFeedback />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,72 +1,44 @@
 /* eslint-disable no-unused-vars */
-import React, { Component } from "react";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
+import React, { useEffect, useState } from "react";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
-function signup() {
+const FetchFeedback = () => {
+  const [feedback, setFeedback] = useState([]);
+  console.log(feedback);
+
+  useEffect(() => {
+    const fetchFeedback = async () => {
+      const feedbackRef = firebase.firestore().collection("announcement");
+      const snapshot = await feedbackRef.get();
+      const feedbackData = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setFeedback(feedbackData);
+    };
+
+    fetchFeedback();
+  }, []);
+
   return (
     <div>
-      <Header activePage="signup" />
-      <div className="flex min-h-full flex-col justify-center py-12 sm:px-6">
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <a href="/" className="">
-            <span className="sr-only">Home Page</span>
-            <img className="mx-auto w-auto" src="/images/sc-icon.png" alt="" />
-          </a>
-          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-            Sign in to your account
-          </h2>
-        </div>
-
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form className="space-y-6" action="#" method="POST" id="loginForm">
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Email address
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Password
-                </label>
-                <div className="mt-1">
-                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"/>
-                </div>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  Sign in
-                </button>
-              </div>
-            </form>
-          </div>
+      <div className="container mx-auto p-4">
+        <h1 className="text-2xl font-bold text-center mb-6">Announcements</h1>
+        <div className="space-y-4">
+          {feedback.map((announcement) => (
+            <div key={announcement.id} className="border p-4 rounded-lg shadow">
+              <h2 className="text-xl font-semibold">{announcement.title}</h2>
+              <p className="text-gray-600">
+                {announcement.date.seconds}
+              </p>
+              <p className="text-gray-700">{announcement.details}</p>
+            </div>
+          ))}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
-}
+};
 
-export default signup;
+export default FetchFeedback;
