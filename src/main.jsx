@@ -13,6 +13,8 @@ import Events from "./pages/events.jsx";
 // import admin
 import Admin from "./pages/admin.jsx";
 import FetchFeedback from "./pages/fetchfeedback.jsx";
+import AdminFeedback from "./pages/adminfeedback.jsx";
+// import PrivateRoute from './component/PrivateRoute.jsx';
 
 export default function Apps() {
   return (
@@ -28,6 +30,8 @@ export default function Apps() {
         {/* admin */}
         <Route path="/admin" element={<Admin />} />
         <Route path="/fetchfeedback" element={<FetchFeedback />} />
+        <Route path="/adminfeedback" element={<AdminFeedback />} />
+        {/* <PrivateRoute path="/admin" component={<Admin/>} /> */}
       </Routes>
     </BrowserRouter>
   );

@@ -52,7 +52,8 @@ function Feedback() {
 
   return (
     <div>
-      <Header activePage="feedback" />
+      {/* //In a component for a regular user page */}
+      <Header activePage="feedback"/>
       <div className="overflow-hidden py-16 px-6 lg:px-8 lg:py-10">
         <div className="relative mx-auto max-w-xl">
           <ToastContainer

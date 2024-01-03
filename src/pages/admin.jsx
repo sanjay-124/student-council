@@ -1,48 +1,113 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
-import Header from "../component/Header";
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
+import { useNavigate, Routes, Route } from 'react-router-dom';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import React, { useState, useEffect } from 'react';
+import Header from '../component/Header';
+import Footer from '../component/Footer';
 
-const AdminPage = () => {
-  const [feedback, setFeedback] = useState([]);
+const firebaseConfig = {
+  apiKey: "AIzaSyD_vwtx1Vv819PBY1QV2QpdD9ahRxYMpnk",
+  authDomain: "student-council-dc47b.firebaseapp.com",
+  projectId: "student-council-dc47b",
+  storageBucket: "student-council-dc47b.appspot.com",
+  messagingSenderId: "969649927286",
+  appId: "1:969649927286:web:58f5dce8e76e01ef885b57",
+};
+firebase.initializeApp(firebaseConfig);
+
+const Admin = () => {
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const fetchFeedback = async () => {
-      const feedbackRef = firebase.firestore().collection("feedback");
-      const snapshot = await feedbackRef.get();
-      const feedbackData = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setFeedback(feedbackData);
-    };
+    const unsubscribe = firebase.auth().onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // User is signed in
+        setUser(authUser);
+      } else {
+        // User is signed out
+        navigate('/signup'); // Redirect to the signup page if not signed in
+      }
+    });
 
-    fetchFeedback();
-  }, []);
+    return () => unsubscribe();
+  }, [navigate]);
+
+  if (!user) {
+    return null; // Display loading state or redirect to login
+  }
+
+  // Render your admin page content here
 
   return (
-    <div>
-      <Header activePage="admin" />
-      <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold text-center mb-6">Admin Page</h1>
-        <div className="space-y-4">
-          {feedback.map((item) => (
-            <div key={item.id} className="border p-4 rounded-lg shadow">
-              <p className="text-lg font-semibold">{item.name}</p>
-              <p className="text-sm text-gray-500">{item.email}</p>
-              <p className="text-gray-700">{item.message}</p>
-              {item.grade && (
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
-                  {item.grade}
-                </span>
-              )}
+      <div>
+        <Header activePage="admin" isAdmin={true} />
+        <div>
+      <nav>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 justify-center">
+            <div className="flex">
+              <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-lg font-medium text-gray-900 hover:border-indigo-500">Finance</a>
+                <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-lg font-medium text-gray-900 hover:border-indigo-500">Agenda</a>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      </nav>
+      <main>
+        <div className="mx-auto max-w-lg justify-center">
+          <h2 className="text-5xl font-medium text-gray-600 text-center pt-[4rem] mt-6 leading-8">WELCOME BACK!</h2>
+          <p className="mt-1 text-lg text-indigo-600 text-center pb-[6rem] font-semibold">STUDENT COUNCIL TEAM</p>
+          <ul role="list" className="mt-6 divide-y divide-gray-200 border-t border-b border-gray-200">
+            <li>
+              <div className="group relative flex items-start space-x-3 py-4">
+                <span className="text-3xl">&#128276;</span>
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm font-medium text-gray-900">
+                    <button onClick={() => openAnnouncements()}>Announcements</button>
+                  </div>
+                  <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden" id="AnnouncementsContainer">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5 h-4/5 bg-white shadow-lg rounded-xl overflow-hidden" id="iframeWrapper">
+                      <iframe className="w-full h-full border-none" src="announcementsAdmin.html"></iframe>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500">Share Important Updates</p>
+                </div>
+                <div className="flex-shrink-0 self-center">
+                  <svg className="h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="group relative flex items-start space-x-3 py-4">
+                <span className="text-3xl">&#128197;</span>
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm font-medium text-gray-900">
+                    <button onClick={() => openEvents()}>Events</button>
+                  </div>
+                  <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden" id="EventsContainer">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-white shadow-lg rounded-xl overflow-hidden" id="iframeWrapper">
+                      <iframe className="w-full h-full border-none" src="eventsAdmin.html"></iframe>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500">Stay Informed About Events</p>
+                </div>
+                <div className="flex-shrink-0 self-center">
+                  <svg className="h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
     </div>
+      </div>
   );
 };
 
-export default AdminPage;
+export default Admin;
