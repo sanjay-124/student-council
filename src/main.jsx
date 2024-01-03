@@ -1,8 +1,6 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from "./App.jsx";
 import "./index.css";
 import Feedback from "./pages/feedback.jsx";
 import AboutUs from "./pages/aboutus.jsx";
@@ -13,12 +11,13 @@ import Events from "./pages/events.jsx";
 // import admin
 import Admin from "./pages/admin.jsx";
 import FetchFeedback from "./pages/fetchfeedback.jsx";
+import Home from "./Home.jsx";
 
-export default function Apps() {
+function Apps() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Home />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
@@ -33,5 +32,12 @@ export default function Apps() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Apps />);
+const rootElement = document.getElementById("root");
+
+// Check if the root element exists before rendering
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<Apps />);
+} else {
+  console.error("Root element with id 'root' not found.");
+}
