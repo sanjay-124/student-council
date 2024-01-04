@@ -33,7 +33,12 @@ function Feedback() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const docRef = await firestore.collection("feedback").add(formData);
+      const timestamp = firebase.firestore.FieldValue.serverTimestamp();
+      const docRef = await firestore.collection("feedback").add({
+        ...formData,
+        timestamp,
+      });
+
       console.log("Document written with ID: ", docRef.id);
       const name = formData.name;
       toast.info(`Thank you ${name} for your feedback!`);
