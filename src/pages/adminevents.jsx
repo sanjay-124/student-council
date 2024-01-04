@@ -60,6 +60,9 @@ function AdminEvents() {
       console.log("Day:", day);
       console.log("Month:", month);
       console.log("Year:", year);
+
+      setShowForm(false);
+      
     } catch (error) {
       // Display error toast
       toast.error("Error adding event");
@@ -129,11 +132,12 @@ function AdminEvents() {
             </div>
             {eventDetails && (
               <button
-                onClick={() => handleDelete(eventDetails.id)}
-                className="text-red-500 hover:text-red-700 cursor-pointer"
-              >
-                <TrashIcon className="w-5 h-5" />
-              </button>
+              onClick={() => handleDelete(eventDetails.id)}
+              className="text-slate-100 group cursor-pointer"
+            >
+              <TrashIcon className="w-5 h-5 group-hover:text-gray-500 transition-colors duration-300 ease-in-out" />
+            </button>
+            
             )}
           </div>
           {eventDetails && (
@@ -212,11 +216,31 @@ function AdminEvents() {
             onClick={() => setShowForm(!showForm)}
             className="ml-6 rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
-            {showForm ? "Cancel" : "Add Event"}
+            Add Event
           </button>
         </div>
       </header>
       {showForm && (
+  <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white p-8 rounded-lg shadow-md">
+    <button
+      onClick={() => setShowForm(false)}
+      className="absolute top-2 left-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+    >
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </button>
         <form onSubmit={handleSubmit} className="p-6 mx-auto max-w-sm">
           {/* ... (form input fields) */}
           <div className="mb-4">
@@ -258,6 +282,7 @@ function AdminEvents() {
             Submit
           </button>
         </form>
+        </div>
       )}
       <div className="shadow ring-1 ring-black ring-opacity-5 lg:flex lg:flex-auto lg:flex-col">
         <div className="grid grid-cols-7 gap-px border-b border-gray-300 bg-gray-200 text-center text-xs font-semibold leading-6 text-gray-700 lg:flex-none">

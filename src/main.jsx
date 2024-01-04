@@ -13,6 +13,9 @@ import Admin from "./pages/admin.jsx";
 import Home from "./Home.jsx";
 import SecondChamber from "./pages/secondchamber.jsx";
 import AdminFeedback from "./pages/adminfeedback.jsx";
+import AdminAnnouncements from "./pages/adminannouncements.jsx";
+import VeiwAnnouncements from "./pages/veiwannouncements.jsx";
+import AdminEvents from "./pages/adminevents.jsx";
 
 function Apps() {
   return (
@@ -29,6 +32,9 @@ function Apps() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/secondchamber" element={<SecondChamber />} />
         <Route path="/adminfeedback" element={<AdminFeedback />} />
+        <Route path="/adminannouncements" element={<AdminAnnouncements />} />
+        <Route path="/veiwannouncements" element={<VeiwAnnouncements/>} />
+        <Route path="/adminevents" element={<AdminEvents/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -14,6 +14,15 @@ const Header = ({ activePage, isAdmin }) => {
             </a>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
+          <a
+              href="/admin"
+              className={`text-lg font-semibold leading-6 ${
+                activePage === "admin"
+                  ? "border-indigo-500 border-b-2 text-gray-900"
+                  : "text-gray-900"
+              } hover:-translate-y-0.5`}>
+              Home
+            </a>
             <a
               href="/adminfeedback"
               className={`text-lg font-semibold leading-6 ${

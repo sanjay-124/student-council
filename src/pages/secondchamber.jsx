@@ -43,25 +43,25 @@ const SecondChamber = () => {
       <div>
         <Header activePage="admin" isAdmin={true} />
         <div>
-      
-      <main>
-        <div className="mx-auto max-w-lg justify-center">
-          <h2 className="text-5xl font-medium text-gray-600 text-center pt-[4rem] mt-6 leading-8">WELCOME BACK!</h2>
-          <p className="mt-1 text-lg text-indigo-600 text-center pb-[6rem] font-semibold">STUDENT COUNCIL TEAM</p>
-        </div>
-      </main>
-      <nav>
+        <nav>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 justify-center">
             <div className="flex">
               <div className="hidden sm:ml-6 sm:flex sm:space-x-20">
-                <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-2xl font-medium text-gray-900 hover:border-indigo-500">Finance</a>
-                <a href="#" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-2xl font-medium text-gray-900 hover:border-indigo-500">Agenda</a>
+                <a href="/finance" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-2xl font-medium text-gray-900 hover:border-indigo-500">Finance</a>
+                <a href="/announcements" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-2xl font-medium text-gray-900 hover:border-indigo-500">Announcements / Events</a>
               </div>
             </div>
           </div>
         </div>
       </nav>
+      <main>
+        <div className="mx-auto max-w-lg justify-center">
+          <h2 className="text-8xl font-medium text-gray-600 text-center pt-[4rem] mt-6">WELCOME BACK!</h2>
+          <p className="mt-1 text-3xl text-indigo-600 text-center pb-[6rem] font-semibold">STUDENT COUNCIL TEAM</p>
+        </div>
+      </main>
+
     </div>
       </div>
   );

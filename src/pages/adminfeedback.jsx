@@ -63,7 +63,7 @@ const AdminFeedback = () => {
               onClick={() => handleDelete(item.id)}
               className="text-red-500 hover:text-red-700 cursor-pointer"
             >
-              <TrashIcon className="w-6 h-8" />
+              <TrashIcon className="w- h-8" />
             </button>
           </div>
         ))}
