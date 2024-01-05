@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import DOMPurify from 'dompurify';
 import "firebase/compat/firestore";
 
 const firebaseConfig = {
@@ -30,10 +31,15 @@ function AdminAnnouncements() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const docRef = await firestore.collection("announcement").add(formData);
-
+      // Replace newlines with HTML line breaks
+      const formattedDescription = formData.description.replace(/\n/g, '<br>');
+  
+      const docRef = await firestore.collection("announcement").add({
+        ...formData,
+        description: formattedDescription,
+      });
+  
       console.log("Document written with ID: ", docRef.id);
-      const name = formData.name;
       toast.success("Announcement added successfully!");
       setFormData({
         title: "",
@@ -44,6 +50,7 @@ function AdminAnnouncements() {
       toast.error(err.message);
     }
   };
+  
 
   return (
     <div>
@@ -92,6 +99,7 @@ function AdminAnnouncements() {
                   type="date"
                   name="date"
                   id="date"
+                  required
                   className="block w-full rounded-md border-gray-700 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   value={formData.date}
                   onChange={handleChange}
@@ -114,6 +122,7 @@ function AdminAnnouncements() {
                   className="block w-full rounded-lg border-gray-700 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   value={formData.description}
                   onChange={handleChange}
+                  style={{ whiteSpace: "pre-line" }}
                 ></textarea>
               </div>
             </div>

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "../component/Header";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-import { TrashIcon } from '@heroicons/react/solid';
+import { TrashIcon } from "@heroicons/react/solid";
+import DOMPurify from "dompurify";
 
 function VeiwAnnouncements() {
   const [announcement, setAnnouncements] = useState([]);
@@ -34,10 +35,10 @@ function VeiwAnnouncements() {
         .collection("announcement")
         .doc(announcementId)
         .delete();
-  
+
       // Clear the selected announcement and update the state
       setSelectedAnnouncement(null);
-  
+
       setAnnouncements((prevAnnouncements) =>
         prevAnnouncements.filter((item) => item.id !== announcementId)
       );
@@ -45,7 +46,6 @@ function VeiwAnnouncements() {
       console.error("Error deleting announcement: ", error);
     }
   };
-  
 
   const handleAnnouncementClick = (announcement) => {
     setSelectedAnnouncement(announcement);
@@ -94,9 +94,15 @@ function VeiwAnnouncements() {
                   </div>
                   <p className="text-sm text-gray-500 font-medium overflow-hidden overflow-ellipsis whitespace-nowrap">
                     <span className="text-black font-normal">
-                      {formatDate(item.date)}{" "}
+                      {formatDate(item.date)}
                     </span>{" "}
-                    | {item.description}
+                    |
+                    <div
+                      className="max-h-[20px] overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-600 text-sm mt-2"
+                      dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(item.description),
+                      }}
+                    />
                   </p>
                 </div>
               ))}
@@ -112,31 +118,40 @@ function VeiwAnnouncements() {
                   <p className="text-gray-600 text-sm mt-2">
                     {formatDate(selectedAnnouncement.date)}
                   </p>
-                  <p className="text-gray-700 mt-4">
-                    {selectedAnnouncement.description}
-                  </p>
+                  <div
+                    className="text-black text-sm mt-2"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(
+                        selectedAnnouncement.description
+                      ),
+                    }}
+                  />
                   {/* Add more fields as needed */}
                   <button
                     onClick={() => handleDelete(selectedAnnouncement.id)}
-                    className="text-red-500 font-semibold pt-4 hover:text-red-700 cursor-pointer"
+                    className="text-red-500 flex-right font-semibold pt-4 hover:text-red-700 cursor-pointer"
                   >
                     Delete
                   </button>
+                  
                 </div>
+                
               ) : (
                 <p className="text-gray-500">
                   Select an announcement to view details
                 </p>
               )}
             </div>
+            <div className="flex justify-end absolute top-8 right-6">
+            <button
+                    id="addButton"
+                    className="inline-flex rounded items-center border border-transparent p-1 bg-gray-300 text-black shadow-sm hover:bg-gray-400"
+                  >
+                    <a href="/adminannouncements">ADD</a>
+                  </button>
+            </div>
           </div>
         </div>
-        <div class="flex justify-end absolute bottom-4 right-4">
-    <button id="addButton" class="inline-flex rounded items-center border border-transparent p-1 bg-gray-300 text-black shadow-sm hover:bg-gray-400">
-     <a href="/adminannouncements">
-        ADD</a> 
-    </button>
-  </div>
       </div>
     </div>
   );

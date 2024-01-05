@@ -31,42 +31,6 @@ function AdminEvents() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      // Extract day, month, and year
-      const fullDate = formData.date; // The full date in "YYYY-MM-DD" format
-      const day = parseInt(fullDate.substring(8, 10)); // Extract day
-      const month = parseInt(fullDate.substring(5, 7), 10); // Extract month
-      const year = parseInt(fullDate.substring(0, 4), 10); // Extract year
-
-      const docRef = await firestore.collection("events").add({
-        details: formData.details,
-        day: day,
-        month: month,
-        year: year,
-      });
-      // Reset form data
-      setFormData({
-        date: "",
-        details: "",
-      });
-
-      // Display success toast
-      toast.success("Event added successfully");
-
-      // Use 'day', 'month', and 'year' variables as needed
-      console.log("Day:", day);
-      console.log("Month:", month);
-      console.log("Year:", year);
-    } catch (error) {
-      // Display error toast
-      toast.error("Error adding event");
-      console.error("Error adding event:", error);
-    }
-  };
-
   useEffect(() => {
     const fetchEvents = () => {
       try {

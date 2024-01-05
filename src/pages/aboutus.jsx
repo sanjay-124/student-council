@@ -17,7 +17,7 @@ function aboutus() {
           >
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
-          <div className="relative lg:pt-20 lg:px-8 lg:pr-0">
+          <div className="relative lg:pt-10 lg:px-8 lg:pr-0">
             <div className="mx-auto max-w-2xl lg:max-w-xl">
               <h1 className="font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Student Council
@@ -35,27 +35,19 @@ function aboutus() {
                 Together, let&apos;s make a positive difference in our school
                 community.
               </p>
-              <div className="mt-10 flex items-center gap-x-6">
-                <a
-                  href="/"
-                  className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Back
-                </a>
-              </div>
             </div>
           </div>
         </div>
         <div id="about-us"></div>
-        <div className="bg-gray-50 lg:absolute lg:top-[104px] lg:right-0 lg:buttom-0 lg:w-1/2">
+        <div className="bg-gray-50 lg:absolute lg:top-[104px] lg:right-0 h-[392px] lg:w-1/2">
           <img
-            className="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
-            src="https://i.pinimg.com/originals/fc/dc/0d/fcdc0dd24ddf81c46069ed66b07915e8.jpg"
+            className=" object-cover lg:aspect-auto lg:h-full lg:w-full"
+            src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1673000674/canadianinternationalschoolcom/affxn668a3hsu4r5iw8w/T3INNOVATORS.jpg"
             alt=""
           />
         </div>
       </div>
-      <div className="mx-auto max-w-7xl pt-12 px-6 lg:px-8 lg:pt-24">
+      <div className="mx-auto max-w-7xl pt-12 px-6 lg:px-8 lg:pt-12">
         <div className="space-y-12 ">
           <div className="space-y-5 sm:space-y-4">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">

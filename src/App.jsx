@@ -26,7 +26,7 @@ import SecondChamber from "./pages/secondchamber.jsx";
 import AdminFeedback from "./pages/adminfeedback.jsx";
 import AdminAnnouncements from "./pages/adminannouncements.jsx";
 import VeiwAnnouncements from "./pages/veiwannouncements.jsx";
-import AdminEvents from "./pages/adminevents.jsx";
+import AdminEvents from "./calender/adminevents.jsx";
 
 const router = createBrowserRouter([
   {

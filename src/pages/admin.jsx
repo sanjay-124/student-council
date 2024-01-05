@@ -38,9 +38,8 @@ const Admin = () => {
   }
 
   const toggleAnnouncements = () => {
-    const iframeContainer = document.getElementById("AnnouncementsContainer");
-    iframeContainer.style.display =
-      iframeContainer.style.display === "none" ? "block" : "none";
+    var AnnouncementsContainer = document.getElementById("AnnouncementsContainer");
+    AnnouncementsContainer.style.display = "block";
   };
 
   const closeAnnouncements = () => {
@@ -89,8 +88,7 @@ const Admin = () => {
                       id="AnnouncementsContainer"
                     >
                       <div
-                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5 h-4/5 bg-white shadow-lg rounded-xl overflow-hidden"
-                        id="iframeWrapper"
+                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-4/5 bg-white shadow-lg rounded-xl overflow-hidden"
                       >
                         <iframe
                           className="w-full h-full border-none"

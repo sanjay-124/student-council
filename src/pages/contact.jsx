@@ -63,7 +63,7 @@ function contact() {
         <div className="hidden lg:absolute lg:inset-y-0 lg:right-0 lg:block lg:w-1/2">
           <img
             className="absolute inset-0 h-full w-full object-cover"
-            src="https://wallpaper.dog/large/11032627.png"
+            src="https://resources.finalsite.net/images/f_auto,q_auto/v1673000578/canadianinternationalschoolcom/gjgvodklqvzwjmq29esk/T1LEANERS.jpg"
             alt=""
           />
         </div>
