@@ -70,7 +70,7 @@ function aboutus() {
                   <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                     <img
                       className="rounded-lg object-cover shadow-lg max-h-[15rem] min-w-[20rem]"
-                      src="public/identity.png"
+                      src="identity.png"
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -121,7 +121,7 @@ function aboutus() {
                 <div className="aspect-w-3 aspect-h-2">
                   <img
                     className="rounded-lg shadow-lg object-cover"
-                    src="public/identity.png"
+                    src="identity.png"
                     alt=""
                   />
                 </div>
@@ -145,7 +145,7 @@ function aboutus() {
                 <div className="aspect-w-3 aspect-h-2">
                   <img
                     className="rounded-lg shadow-lg object-cover"
-                    src="public/identity.png"
+                    src="identity.png"
                     alt=""
                   />
                 </div>
@@ -171,7 +171,7 @@ function aboutus() {
                 <div className="aspect-w-3 aspect-h-2">
                   <img
                     className="rounded-lg shadow-lg object-cover"
-                    src="public/identity.png"
+                    src="identity.png"
                     alt=""
                   />
                 </div>
@@ -213,7 +213,7 @@ function aboutus() {
                 <div className="flex items-center space-x-4 lg:space-x-6">
                   <img
                     className="h-16 w-16 rounded-full lg:h-20 lg:w-20"
-                    src="public/identity.png"
+                    src="identity.png"
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
@@ -227,7 +227,7 @@ function aboutus() {
                 <div className="flex items-center space-x-4 lg:space-x-6">
                   <img
                     className="h-16 w-16 rounded-full lg:h-20 lg:w-20"
-                    src="public/identity.png"
+                    src="identity.png"
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
@@ -240,7 +240,7 @@ function aboutus() {
                 <div className="flex items-center space-x-4 lg:space-x-6">
                   <img
                     className="h-16 w-16 rounded-full lg:h-20 lg:w-20"
-                    src="public/identity.png"
+                    src="identity.png"
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
@@ -253,7 +253,7 @@ function aboutus() {
                 <div className="flex items-center space-x-4 lg:space-x-6">
                   <img
                     className="h-16 w-16 rounded-full lg:h-20 lg:w-20"
-                    src="public/identity.png"
+                    src="identity.png"
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
@@ -285,7 +285,7 @@ function aboutus() {
               <div className="space-y-6">
                 <img
                   className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56"
-                  src="public/identity.png"
+                  src="identity.png"
                   alt=""
                 />
                 <div className="space-y-2">
@@ -306,7 +306,7 @@ function aboutus() {
               <div className="space-y-6">
                 <img
                   className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56"
-                  src="public/identity.png"
+                  src="identity.png"
                   alt=""
                 />
                 <div className="space-y-2">
@@ -329,7 +329,7 @@ function aboutus() {
               <div className="space-y-6">
                 <img
                   className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56"
-                  src="public/identity.png"
+                  src="identity.png"
                   alt=""
                 />
                 <div className="space-y-2">
