@@ -157,22 +157,10 @@ const Admin = () => {
                 <div className="group relative flex items-start space-x-3 py-4">
                   <span className="text-3xl">&#128181;</span>
                   <div className="min-w-0 flex-1">
-                    <div className="text-sm font-medium text-gray-900">
-                      <button onClick={() => openEvents()}>Finance</button>
-                    </div>
-                    <div
-                      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden"
-                      id="EventsContainer"
-                    >
-                      <div
-                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-white shadow-lg rounded-xl overflow-hidden"
-                        id="iframeWrapper"
-                      >
-                        <iframe
-                          className="w-full h-full border-none"
-                          src="eventsAdmin.html"
-                        ></iframe>
-                      </div>
+                  <div className="text-sm font-medium text-gray-900">
+                      <a href="/finance">
+                        <button>Finance</button>
+                      </a>
                     </div>
                     <p className="text-sm text-gray-500">
                       Manage financial transactions

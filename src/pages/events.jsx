@@ -33,8 +33,8 @@ function events() {
     <div>
       <Header activePage="events" />
       <div>
-        <div className="flex h-[10px] justify-center">
-          {/* Navigation Tabs */}
+        {/* <div className="flex h-[10px] justify-center">
+          Navigation Tabs
           <div className="flex">
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <div className="hidden sm:block">
@@ -57,10 +57,10 @@ function events() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Header for Calendar */}
-        <header className="flex items-center justify-between border-b border-gray-200 py-4 px-6 lg:flex-none">
+        {/* <header className="flex items-center justify-between border-b border-gray-200 py-4 px-6 lg:flex-none">
           <h1 className="text-lg font-semibold text-gray-900">
             <time dateTime="2022-01">
               {new Date(2022, selectedMonth - 1, 1).toLocaleString("default", {
@@ -125,10 +125,10 @@ function events() {
               </button>
             </div>
           </div>
-        </header>
+        </header> */}
 
         {/* Weekday Headers */}
-        <div className="shadow ring-1 ring-black ring-opacity-5 lg:flex lg:flex-auto lg:flex-col">
+        {/* <div className="shadow ring-1 ring-black ring-opacity-5 lg:flex lg:flex-auto lg:flex-col">
           <div className="grid grid-cols-7 gap-px border-b border-gray-300 bg-gray-200 text-center text-xs font-semibold leading-6 text-gray-700 lg:flex-none">
             <div className="flex justify-center bg-white py-2">
               <span className="sr-only sm:not-sr-only">Mon</span>
@@ -152,7 +152,7 @@ function events() {
               <span className="sr-only sm:not-sr-only">Sun</span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Calendar Component */}
         <Calender />

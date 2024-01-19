@@ -58,7 +58,7 @@ const Header = ({ activePage, isAdmin }) => {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">HOME PAGE</span>
-            <img className="h-14" src="/favicon.png" alt="" />
+            <img className="h-16" src="/favicon.png" alt="" />
           </a>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
@@ -66,11 +66,11 @@ const Header = ({ activePage, isAdmin }) => {
             <a
               key={href}
               href={href}
-              className={`text-lg font-semibold leading-6 ${
+              className={`text-xl font-semibold leading-6 ${
                 activePage === href
                   ? "border-indigo-500 border-b-2 text-gray-900"
                   : "text-gray-900"
-              } hover:-translate-y-0.5`}
+              } hover:hover:rounded-lg p-2 hover:bg-indigo-500 hover:text-white`}              
             >
               {label}
             </a>

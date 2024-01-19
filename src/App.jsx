@@ -5,6 +5,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore"; // Include the firestore module
 import Header from "./component/Header";
+
 // import react router dom
 import {
   BrowserRouter,
@@ -27,6 +28,7 @@ import AdminFeedback from "./pages/adminfeedback.jsx";
 import AdminAnnouncements from "./pages/adminannouncements.jsx";
 import VeiwAnnouncements from "./pages/veiwannouncements.jsx";
 import AdminEvents from "./calender/adminevents.jsx";
+import Finance from "./pages/finance.jsx";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +82,10 @@ const router = createBrowserRouter([
   {
     path:"/adminevents",
     element:<AdminEvents/>,
+  },
+  {
+    path:"/finance",
+    element:<Finance/>,
   },
 ]);
 

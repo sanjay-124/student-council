@@ -16,6 +16,7 @@ import AdminFeedback from "./pages/adminfeedback.jsx";
 import AdminAnnouncements from "./pages/adminannouncements.jsx";
 import VeiwAnnouncements from "./pages/veiwannouncements.jsx";
 import AdminEvents from "./pages/adminevents.jsx";
+import Finance from "./pages/finance.jsx";
 
 
 function Apps() {
@@ -36,6 +37,7 @@ function Apps() {
         <Route path="/adminannouncements" element={<AdminAnnouncements />} />
         <Route path="/veiwannouncements" element={<VeiwAnnouncements/>} />
         <Route path="/adminevents" element={<AdminEvents/>} />
+        <Route path="/finance" element={<Finance/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -171,7 +171,7 @@ function aboutus() {
                 <div className="aspect-w-3 aspect-h-2">
                   <img
                     className="rounded-lg shadow-lg object-cover"
-                    src="identity.png"
+                    src="/images/nihal.JPG"
                     alt=""
                   />
                 </div>
