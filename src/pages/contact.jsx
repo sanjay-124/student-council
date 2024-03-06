@@ -9,7 +9,7 @@ function contact() {
       <Header activePage="contact" />
       <div className="flex min-h-full flex-col bg-white lg:relative">
         <div className="flex flex-grow flex-col">
-          <main className="flex flex-grow flex-col bg-white">
+          <main className="flex flex-grow flex-col bg-fuchsia-50">
             <div className="mx-auto flex w-full max-w-7xl flex-grow flex-col px-6 lg:px-8">
               <div className="my-auto flex-shrink-0 py-16 sm:py-32">
                 <p className="text-base font-semibold text-indigo-600">

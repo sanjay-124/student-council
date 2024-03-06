@@ -65,7 +65,7 @@ function AdminAnnouncements() {
         pauseOnHover
         theme="light"
       />
-      <div className="flex justify-center items-center min-h-screen bg-white">
+      <div className="flex justify-center items-center min-h-screen bg-fuchsia-50">
         <div className="rounded-xl p-6 max-w-md w-full">
           <form className="grid gap-y-6" onSubmit={handleSubmit}>
             <div>
@@ -129,7 +129,7 @@ function AdminAnnouncements() {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-fuchsia-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Submit
               </button>

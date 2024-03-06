@@ -39,7 +39,7 @@ function aboutus() {
           </div>
         </div>
         <div id="about-us"></div>
-        <div className="bg-gray-50 lg:absolute lg:top-[104px] lg:right-0 h-[392px] lg:w-1/2">
+        <div className="bg-gray-50 lg:absolute lg:top-[112px] lg:right-0 h-[392px] lg:w-1/2">
           <img
             className=" object-cover lg:aspect-auto lg:h-full lg:w-full"
             src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1673000674/canadianinternationalschoolcom/affxn668a3hsu4r5iw8w/T3INNOVATORS.jpg"
@@ -76,7 +76,7 @@ function aboutus() {
                   <div className="sm:col-span-2">
                     <div className="space-y-4">
                       <div className="space-y-1 text-lg font-medium leading-6">
-                        <h3>Ainhoa Lamagnere</h3>
+                        <h3>abc</h3>
                         <p className="text-indigo-600">President</p>
                       </div>
                       <div className="text-lg">
@@ -128,7 +128,7 @@ function aboutus() {
 
                 <div className="space-y-2">
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>Niranjan</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">Governor of Finance</p>
                   </div>
                   <a
@@ -152,7 +152,7 @@ function aboutus() {
 
                 <div className="space-y-2">
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>Ronojoy</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">
                       Governor of Student Affairs
                     </p>
@@ -171,14 +171,14 @@ function aboutus() {
                 <div className="aspect-w-3 aspect-h-2">
                   <img
                     className="rounded-lg shadow-lg object-cover"
-                    src="/images/nihal.JPG"
+                    src="identity.png"
                     alt=""
                   />
                 </div>
 
                 <div className="space-y-2">
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>Nihal</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">Governor of Operations</p>
                   </div>
                   <a
@@ -217,7 +217,7 @@ function aboutus() {
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>XYZ name</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">Grade 9</p>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ function aboutus() {
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>XYZ name</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">Grade 10</p>
                   </div>
                 </div>
@@ -244,7 +244,7 @@ function aboutus() {
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>XYZ name</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">IB 1</p>
                   </div>
                 </div>
@@ -257,7 +257,7 @@ function aboutus() {
                     alt=""
                   />
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>XYZ name</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">IB 2</p>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ function aboutus() {
                 />
                 <div className="space-y-2">
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>XYZ name</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">Department of sports</p>
                   </div>
                   <a
@@ -311,7 +311,7 @@ function aboutus() {
                 />
                 <div className="space-y-2">
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>XYZ name</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">
                       Representative of Community outreach
                     </p>
@@ -334,7 +334,7 @@ function aboutus() {
                 />
                 <div className="space-y-2">
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <h3>XYZ name</h3>
+                    <h3>abc</h3>
                     <p className="text-indigo-600">Department of Arts</p>
                   </div>
                   <a

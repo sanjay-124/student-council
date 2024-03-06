@@ -81,7 +81,7 @@ function Feedback() {
               Student Council&apos;s actions.
             </p>
           </div>
-          <div className="mt-12 border-gray-300 bg-gray-50 rounded-xl p-6 shadow-lg">
+          <div className="mt-12 border-gray-300 bg-fuchsia-50 rounded-xl p-6 shadow-lg">
             <form
               className="text-left grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               onSubmit={handleSubmit}
@@ -171,7 +171,7 @@ function Feedback() {
               <div className="sm:col-span-2">
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-purple-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-fuchsia-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Submit
                 </button>
