@@ -2,22 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import Header from "../component/Header";
 import Footer from "../component/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyD_vwtx1Vv819PBY1QV2QpdD9ahRxYMpnk",
-  authDomain: "student-council-dc47b.firebaseapp.com",
-  projectId: "student-council-dc47b",
-  storageBucket: "student-council-dc47b.appspot.com",
-  messagingSenderId: "969649927286",
-  appId: "1:969649927286:web:58f5dce8e76e01ef885b57",
-};
+import { firebaseConfig } from "../fireconfig";
+import ExecutiveHeader from "../component/ExecutiveHeader";
 firebase.initializeApp(firebaseConfig);
 
-const Signup = () => {
+
+const executives = ["finance@gmail.com", "studentaffairs@gamil.com", "operations@gmail.com", "president@gmail.com"];
+const secondchamber = ["sports@gmail.com", "arts@gmail.com", "community@gmail.com", "ib1@gmail.com", "ib2@gmail.com", "gr9@gmail.com", "gr10@gmail.com"];
+
+function UserSignup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,25 +22,22 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      // Sign in with email and password
-      const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+      const userCredential = await firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password);
       const user = userCredential.user;
 
-      // Check user's UID to determine admin page
-      if (user.uid === "eWuEqdPZhHcHDDKP0v0SzHzSjOq1" || user.uid === "6QmWbtIebWNrYwmSKMS7BW2L2zh2") {
-        // Navigate to secondchamber admin page
+      if (executives.includes(user.email)) {
+        toast.success("Sign In successful!");
+        setEmail("");
+        setPassword("");
+        navigate("/executive");
+      } else if (secondchamber.includes(user.email)) {
         toast.success("Sign In successful!");
         setEmail("");
         setPassword("");
         navigate("/secondchamber");
-      } else if (user.uid === "h8oos4NitYfHmszvX4ShKa72lXq1" || user.uid === "cgtAoZH0CQabibYSPpxppRcIgKK2") {
-        // Navigate to regular admin page
-        toast.success("Sign In successful!");
-        setEmail("");
-        setPassword("");
-        navigate("/admin");
       } else {
-        // User doesn't have admin credentials
         toast.error("You don't have permission to access the admin pages.");
       }
     } catch (error) {
@@ -54,7 +47,7 @@ const Signup = () => {
 
   return (
     <div>
-      <Header activePage="signup" />
+      <ExecutiveHeader activePage="signup" />
       <div className="flex min-h-full flex-col justify-center py-12 sm:px-6">
         <ToastContainer
           position="top-center"
@@ -136,4 +129,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default UserSignup;

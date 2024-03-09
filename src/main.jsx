@@ -2,21 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./index.css";
-import Feedback from "./pages/feedback.jsx";
-import AboutUs from "./pages/aboutus.jsx";
-import Contact from "./pages/contact.jsx";
-import SignUp from "./pages/signup.jsx";
-import Announcements from "./pages/announcements.jsx";
-import Events from "./pages/events.jsx";
-// import admin
-import Admin from "./pages/admin.jsx";
 import Home from "./Home.jsx";
+import UserEvents from "./pages/userevents.jsx";
+import UserAnnouncements from "./pages/userannouncements.jsx";
+import UserAboutus from "./pages/useraboutus.jsx";
+import UserContact from "./pages/usercontact.jsx";
+import UserFeedback from "./pages/userfeedback.jsx";
+import UserSignup from "./pages/usersignup.jsx";
+import Executive from "./pages/executive.jsx";
+import ExecutiveAnnouncements from "./pages/executiveannouncements.jsx";
+import ExecutiveEvents from "./pages/executiveevents.jsx";
+import ExecutiveFeedback from "./pages/executivefeedback.jsx";
+import SecondAnnouncement from "./pages/secondannouncement.jsx";
 import SecondChamber from "./pages/secondchamber.jsx";
-import AdminFeedback from "./pages/adminfeedback.jsx";
-import AdminAnnouncements from "./pages/adminannouncements.jsx";
-import VeiwAnnouncements from "./pages/veiwannouncements.jsx";
-import AdminEvents from "./pages/adminevents.jsx";
-import Finance from "./pages/finance.jsx";
+import SecondEvents from "./pages/secondevents.jsx";
+import SecondFeedback from "./pages/secondfeedback.jsx";
+
 
 
 function Apps() {
@@ -24,20 +25,20 @@ function Apps() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/feedback" element={<Feedback />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/announcements" element={<Announcements />} />
-        <Route path="/events" element={<Events />} />
-        {/* admin */}
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/secondchamber" element={<SecondChamber />} />
-        <Route path="/adminfeedback" element={<AdminFeedback />} />
-        <Route path="/adminannouncements" element={<AdminAnnouncements />} />
-        <Route path="/veiwannouncements" element={<VeiwAnnouncements/>} />
-        <Route path="/adminevents" element={<AdminEvents/>} />
-        <Route path="/finance" element={<Finance/>} />
+        <Route path="userevents" element={<UserEvents />} />
+        <Route path="userannouncements" element={< UserAnnouncements/>} />
+        <Route path="useraboutus" element={< UserAboutus/>} />
+        <Route path="usercontact" element={<UserContact />} />
+        <Route path="userfeedback" element={< UserFeedback/>} />
+        <Route path="usersignup" element={< UserSignup/>} />
+        <Route path="executive" element={< Executive/>} />
+        <Route path="executiveannouncements" element={<ExecutiveAnnouncements />} />
+        <Route path="executiveevents" element={< ExecutiveEvents/>} />
+        <Route path="executivefeedback" element={< ExecutiveFeedback/>} />
+        <Route path="secondannouncement" element={<SecondAnnouncement />} />
+        <Route path="secondchamber" element={< SecondChamber/>} />
+        <Route path="secondevents" element={< SecondEvents/>} />
+        <Route path="secondfeedback" element={< SecondFeedback/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import Header from "../component/Header";
 import Footer from "../component/Footer";
+import ExecutiveHeader from "../component/ExecutiveHeader";
 
-function aboutus() {
+function UserAboutus() {
   return (
     <div className="relative bg-white">
-      <Header />
+      <ExecutiveHeader />
       <div className="mx-auto max-w-7xl">
         <div className="flex relative z-10 lg:w-full lg:max-w-2xl">
           <svg
@@ -354,4 +354,4 @@ function aboutus() {
   );
 }
 
-export default aboutus;
+export default UserAboutus;

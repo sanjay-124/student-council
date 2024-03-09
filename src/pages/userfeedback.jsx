@@ -1,22 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import Header from "../component/Header";
 import firebase from "firebase/compat/app";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "firebase/compat/firestore";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD_vwtx1Vv819PBY1QV2QpdD9ahRxYMpnk",
-  authDomain: "student-council-dc47b.firebaseapp.com",
-  projectId: "student-council-dc47b",
-  storageBucket: "student-council-dc47b.appspot.com",
-  messagingSenderId: "969649927286",
-  appId: "1:969649927286:web:58f5dce8e76e01ef885b57",
-};
+import { firebaseConfig } from "../fireconfig";
+import ExecutiveHeader from "../component/ExecutiveHeader";
 firebase.initializeApp(firebaseConfig);
 
-function Feedback() {
+function UserFeedback() {
   const firestore = firebase.firestore();
 
   const [formData, setFormData] = React.useState({
@@ -58,8 +51,8 @@ function Feedback() {
   return (
     <div>
       {/* //In a component for a regular user page */}
-      <Header activePage="feedback"/>
-      <div className="overflow-hidden py-16 px-6 lg:px-8 lg:py-10">
+      <ExecutiveHeader activePage="feedback"/>
+      <div className="overflow-hidden py-2 px-6 lg:px-8">
         <div className="relative mx-auto max-w-xl">
           <ToastContainer
             position="top-center"
@@ -81,7 +74,7 @@ function Feedback() {
               Student Council&apos;s actions.
             </p>
           </div>
-          <div className="mt-12 border-gray-300 bg-fuchsia-50 rounded-xl p-6 shadow-lg">
+          <div className="mt-12 border-gray-300 bg-gradient-to-br from-pink-100 to-purple-200 rounded-xl p-6 shadow-lg">
             <form
               className="text-left grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               onSubmit={handleSubmit}
@@ -184,4 +177,4 @@ function Feedback() {
   );
 }
 
-export default Feedback;
+export default UserFeedback;

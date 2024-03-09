@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "../component/Header";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-import { TrashIcon } from "@heroicons/react/solid";
 import DOMPurify from "dompurify";
 
 function VeiwAnnouncements() {
@@ -111,7 +109,7 @@ function VeiwAnnouncements() {
             {/* Announcement Details */}
             <div className="flex-1 p-4">
               {selectedAnnouncement ? (
-                <div className="border p-4 rounded-lg shadow">
+                <div className="border p-4 bg-gradient-to-br from-pink-100 to-purple-200 rounded-lg shadow">
                   <h2 className="text-2xl font-semibold">
                     {selectedAnnouncement.title}
                   </h2>
@@ -145,9 +143,9 @@ function VeiwAnnouncements() {
             <div className="flex justify-end absolute top-8 right-6">
             <button
                     id="addButton"
-                    className="inline-flex rounded items-center border border-transparent p-1 bg-gray-300 text-black shadow-sm hover:bg-gray-400"
+                    className="inline-flex rounded items-center border border-transparent p-1  bg-purple-600 text-white shadow-sm hover:bg-purple-700"
                   >
-                    <a href="/adminannouncements">ADD</a>
+                    <a href="/executiveannouncements">ADD</a>
                   </button>
             </div>
           </div>

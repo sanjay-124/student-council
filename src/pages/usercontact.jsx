@@ -1,15 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import Header from "../component/Header";
 import Footer from "../component/Footer";
+import ExecutiveHeader from "../component/ExecutiveHeader";
 
-function contact() {
+function UserContact() {
   return (
     <div>
-      <Header activePage="contact" />
+      <ExecutiveHeader activePage="contact" />
       <div className="flex min-h-full flex-col bg-white lg:relative">
         <div className="flex flex-grow flex-col">
-          <main className="flex flex-grow flex-col bg-fuchsia-50">
+          <main className="flex flex-grow flex-col bg-gradient-to-br from-pink-100 to-purple-200">
             <div className="mx-auto flex w-full max-w-7xl flex-grow flex-col px-6 lg:px-8">
               <div className="my-auto flex-shrink-0 py-16 sm:py-32">
                 <p className="text-base font-semibold text-indigo-600">
@@ -73,4 +73,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default UserContact;

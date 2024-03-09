@@ -16,19 +16,21 @@ import {
   Link,
 } from "react-router-dom";
 import Home from "./Home.jsx";
-import Feedback from "./pages/feedback.jsx";
-import AboutUs from "./pages/aboutus.jsx";
-import Contact from "./pages/contact.jsx";
-import SignUp from "./pages/signup.jsx";
-import Announcements from "./pages/announcements.jsx";
-import Events from "./pages/events.jsx";
-import Admin from "./pages/admin.jsx";
+import UserFeedback from "./pages/userfeedback.jsx";
+import UserAboutus from "./pages/useraboutus.jsx";
+import UserContact from "./pages/usercontact.jsx";
+import UserSignup from "./pages/usersignup.jsx";
+import UserAnnouncements from "./pages/userannouncements.jsx";
+import UserEvents from "./pages/userevents.jsx";
+import Executive from "./pages/executive.jsx";
 import SecondChamber from "./pages/secondchamber.jsx";
-import AdminFeedback from "./pages/adminfeedback.jsx";
-import AdminAnnouncements from "./pages/adminannouncements.jsx";
+import ExecutiveFeedback from "./pages/executivefeedback.jsx";
+import ExecutiveAnnouncements from "./pages/executiveannouncements.jsx";
 import VeiwAnnouncements from "./pages/veiwannouncements.jsx";
-import AdminEvents from "./calender/adminevents.jsx";
-import Finance from "./pages/finance.jsx";
+import ExecutiveEvents from "./calender/executiveevents.jsx";
+import SecondFeedback from "./pages/secondfeedback.jsx";
+import SecondAnnouncement from "./pages/secondannouncement.jsx";
+import SecondEvents from "./pages/secondevents.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,56 +38,64 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/feedback",
-    element: <Feedback />,
+    path: "/userfeedback",
+    element: <UserFeedback />,
   },
   {
-    path: "/aboutus",
-    element: <AboutUs />,
+    path: "/useraboutus",
+    element: <UserAboutus />,
   },
   {
-    path: "/contact",
-    element: <Contact />,
+    path: "/usercontact",
+    element: <UserContact />,
   },
   {
-    path: "/signup",
-    element: <SignUp />,
+    path: "/usersignup",
+    element: <UserSignup />,
   },
   {
-    path: "/announcements",
-    element: <Announcements />,
+    path: "/userannouncements",
+    element: <UserAnnouncements />,
   },
   {
-    path: "/events",
-    element: <Events />,
+    path: "/userevents",
+    element: <UserEvents />,
   },
   {
-    path: "/admin",
-    element: <Admin />,
+    path: "/executive",
+    element: <Executive />,
   },
   {
     path: "/secondchamber",
     element: <SecondChamber />,
   },
   {
-    path:"/adminfeedback",
-    element:<AdminFeedback/>,
+    path:"/executivefeedback",
+    element:<ExecutiveFeedback/>,
   },
   {
-    path:"/adminannouncements",
-    element:<AdminAnnouncements/>,
+    path:"/executiveannouncements",
+    element:<ExecutiveAnnouncements/>,
   },
   {
     path:"/veiwannouncements",
     element:<VeiwAnnouncements/>,
   },
   {
-    path:"/adminevents",
-    element:<AdminEvents/>,
+    path:"/executiveevents",
+    element:<ExecutiveEvents/>,
   },
   {
-    path:"/finance",
-    element:<Finance/>,
+    path:"/secondevents",
+    element:<SecondFeedback/>,
+  },
+  {
+    path:"/secondannouncement",
+    element:<SecondAnnouncement/>,
+  },
+  {
+    path:"/secondevents",
+    element:<SecondEvents/>,
   },
 ]);
 

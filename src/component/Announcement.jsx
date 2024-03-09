@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "../component/Header";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import DOMPurify from "dompurify";
@@ -14,8 +13,8 @@ firebase.firestore().enablePersistence()
   });
 
 
-function Announcements() {
-  const [announcement, setAnnouncements] = useState([]);
+function Announcement() {
+  const [announcements, setAnnouncements] = useState([]);
   const [selectedAnnouncement, setSelectedAnnouncement] = useState(null);
 
   useEffect(() => {
@@ -65,44 +64,22 @@ function Announcements() {
   };
 
   return (
-    <div>
-      <Header activePage="announcement" />
+    <div className="">
       <div className="isolate bg-white">
         <div className="sticky -z-9999 top-0 left-0">
-          <div className="flex h-16 justify-center">
-            <div className="flex">
-              <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                <div className="hidden sm:block">
-                  <div>
-                    <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-                      <a
-                        href="/announcements"
-                        className="text-black-500 border-indigo-500 group inline-flex items-center px-1 border-b-2 font-medium text-lg"
-                      >
-                        <span>Announcements</span>
-                      </a>
-                      <a
-                        href="/events"
-                        className="border-transparent text-black-500 hover:border-indigo-500 group inline-flex items-center px-1 border-b-2 font-medium text-lg"
-                      >
-                        <span>Events</span>
-                      </a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
+          
             </div>
           </div>
           <div>
             <div className="flex">
               {/* Sidebar */}
               <div className="w-1/3 p-4 border-r overflow-y-auto">
-                {announcement.map((item, index) => (
+                {announcements.map((item, index) => (
                   <div
                     key={item.id}
                     onClick={() => handleAnnouncementClick(item)}
                     className={`p-2 cursor-pointer m-2 border shadow-sm rounded-md ${
-                      selectedAnnouncement?.id === item.id ? "bg-gray-100" : ""
+                      selectedAnnouncement?.id === item.id ? "bg-gray-100 " : ""
                     } ${index !== 0 ? "pt-3 pb-3" : ""}`}
                   >
                     <div className="text-lg pb-1 font-semibold overflow-hidden overflow-ellipsis">
@@ -127,7 +104,7 @@ function Announcements() {
               {/* Announcement Details */}
               <div className="flex-1 p-4">
                 {selectedAnnouncement ? (
-                  <div className="border p-4 rounded-lg shadow">
+                  <div className="border p-4 bg-gradient-to-br from-pink-100 to-purple-200 rounded-lg shadow">
                     <h2 className="text-2xl font-semibold">
                       {selectedAnnouncement.title}
                     </h2>
@@ -153,9 +130,7 @@ function Announcements() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
   );
 }
 
-export default Announcements;
+export default Announcement;
