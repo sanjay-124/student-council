@@ -17,6 +17,7 @@ import SecondAnnouncement from "./pages/secondannouncement.jsx";
 import SecondChamber from "./pages/secondchamber.jsx";
 import SecondEvents from "./pages/secondevents.jsx";
 import SecondFeedback from "./pages/secondfeedback.jsx";
+import VeiwAnnouncements from "./pages/veiwannouncements.jsx";
 
 
 
@@ -39,6 +40,7 @@ function Apps() {
         <Route path="secondchamber" element={< SecondChamber/>} />
         <Route path="secondevents" element={< SecondEvents/>} />
         <Route path="secondfeedback" element={< SecondFeedback/>} />
+        <Route path="/veiwannouncements" element={<VeiwAnnouncements />} />
       </Routes>
     </BrowserRouter>
   );

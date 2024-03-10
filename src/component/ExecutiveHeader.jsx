@@ -14,7 +14,6 @@ const ExecutiveHeader = ({
   isAuthorized,
   showAddEventForm,
   setShowAddEventForm,
-  isSecond,
 }) => {
   const navigate = useNavigate();
 
@@ -201,7 +200,7 @@ const ExecutiveHeader = ({
   );
 };
 
-Header.propTypes = {
+ExecutiveHeader.propTypes = {
   activePage: PropTypes.string.isRequired,
   isAdmin: PropTypes.bool,
   handleAuthClick: PropTypes.func,

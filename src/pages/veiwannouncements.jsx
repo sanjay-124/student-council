@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import DOMPurify from "dompurify";
+import { firebaseConfig } from "../fireconfig";
 
+firebase.initializeApp(firebaseConfig);
 function VeiwAnnouncements() {
   const [announcement, setAnnouncements] = useState([]);
   const [selectedAnnouncement, setSelectedAnnouncement] = useState(null);

@@ -6,7 +6,7 @@ function UserEvents() {
     <div className="bg-gradient-to-br from-pink-100 to-purple-200">
       <ExecutiveHeader activePage="announcement" />
       <div className="sticky -z-9999 top-0 left-0">
-        <div className="flex h-16 justify-center">
+        <div className="flex h-10 justify-center">
           <div className="flex">
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <div className="hidden sm:block">

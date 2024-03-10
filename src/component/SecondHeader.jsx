@@ -157,7 +157,7 @@ const SecondHeader = ({
   }
 };
 
-SecondChamber.propTypes = {
+SecondHeader.propTypes = {
   activePage: PropTypes.string.isRequired,
   isSecond: PropTypes.bool.isRequired,
   handleAuthClick: PropTypes.func,

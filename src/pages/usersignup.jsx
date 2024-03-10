@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import Footer from "../component/Footer";
@@ -61,10 +61,10 @@ function UserSignup() {
           theme="light"
         />
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <a href="/" className="">
+          <Link to="/">
             <span className="sr-only">Home Page</span>
             <img className="mx-auto w-auto" src="/images/sc-icon.png" alt="" />
-          </a>
+          </Link>
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
             Sign in to your account
           </h2>

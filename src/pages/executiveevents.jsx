@@ -225,7 +225,7 @@ function ExecutiveEvents() {
   return (
     <div className="px-16 ">
       <ExecutiveHeader
-        activePage="adminevents"
+        activePage="executiveevents"
         isAdmin={true}
         handleAuthClick={handleAuthClick}
         handleSignoutClick={handleSignoutClick}

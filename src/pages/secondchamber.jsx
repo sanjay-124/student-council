@@ -4,6 +4,8 @@ import "firebase/compat/auth";
 import React, { useState, useEffect } from "react";
 import { firebaseConfig } from "../fireconfig";
 import SecondHeader from "../component/SecondHeader";
+import ChatRoom from "../component/Chatroom";
+
 firebase.initializeApp(firebaseConfig);
 
 function SecondChamber() {
@@ -64,6 +66,7 @@ function SecondChamber() {
               STUDENT COUNCIL TEAM
             </p>
           </div>
+          <ChatRoom />
         </main>
       </div>
     </div>

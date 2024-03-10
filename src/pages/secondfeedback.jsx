@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Feedback from "../component/Feedback";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-import SecondChamber from "../component/SecondChamber";
 import SecondHeader from "../component/SecondHeader";
 
 function SecondFeedback() {

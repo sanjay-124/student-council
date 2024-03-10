@@ -3,8 +3,9 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import React, { useState, useEffect } from "react";
 import ExecutiveHeader from "../component/ExecutiveHeader";
-
 import { firebaseConfig } from "../fireconfig";
+import ChatRoom from "../component/Chatroom";
+
 firebase.initializeApp(firebaseConfig);
 
 function Executive() {
@@ -29,7 +30,9 @@ function Executive() {
   }
 
   const toggleAnnouncements = () => {
-    var AnnouncementsContainer = document.getElementById("AnnouncementsContainer");
+    var AnnouncementsContainer = document.getElementById(
+      "AnnouncementsContainer"
+    );
     AnnouncementsContainer.style.display = "block";
   };
 
@@ -137,6 +140,7 @@ function Executive() {
                 </div>
               </li>
             </ul>
+            <ChatRoom />
           </div>
         </main>
       </div>
