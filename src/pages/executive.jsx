@@ -9,6 +9,7 @@ import ChatRoom from "../component/Chatroom";
 firebase.initializeApp(firebaseConfig);
 
 function Executive() {
+  const [showChat, setShowChat] = useState(false);
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   console.log(user);
@@ -28,6 +29,8 @@ function Executive() {
   if (!user) {
     return null; // Display loading state or redirect to login
   }
+
+  const toggleChat = () => setShowChat(!showChat);
 
   const toggleAnnouncements = () => {
     var AnnouncementsContainer = document.getElementById(
@@ -139,8 +142,44 @@ function Executive() {
                   </div>
                 </div>
               </li>
+              <li>
+                <div className="group relative flex items-start space-x-3 py-4 px-4">
+                  <span className="text-3xl text-purple-500">&#128172;</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-xl font-medium text-gray-900">
+                        <button onClick={toggleChat} className="hover:text-purple-600 transition-colors duration-300">
+                          {showChat ? "Close Chat" : "Open Chat"}
+                        </button>
+                    </div>
+                    <p className="text-sm text-gray-500">
+                      Communicate with the team
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 self-center">
+                    <svg
+                      className="h-5 w-5 text-gray-400 group-hover:text-purple-500 transition-colors duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </li>
             </ul>
-            <ChatRoom />
+
+            {/* Conditionally render ChatRoom as a sidebar */}
+            {showChat && (
+              <div className="fixed right-0 top-28 bg-fuchsia-200 border-gray-200 shadow-lg w-[450px] overflow-auto min-h-96 rounded-lg">
+                <ChatRoom />
+              </div>
+            )}
           </div>
         </main>
       </div>
