@@ -117,7 +117,6 @@ function Announcement() {
                     ),
                   }}
                 />
-                {/* Add more fields as needed */}
               </div>
             ) : (
               <p className="text-gray-500">

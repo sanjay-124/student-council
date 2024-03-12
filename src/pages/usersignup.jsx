@@ -37,11 +37,9 @@ function UserSignup() {
         setEmail("");
         setPassword("");
         navigate("/secondchamber");
-      } else {
-        toast.error("You don't have permission to access the admin pages.");
       }
     } catch (error) {
-      toast.error(error.message);
+      toast.error("You don't have permission to access the admin pages");
     }
   };
 
