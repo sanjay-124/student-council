@@ -5,7 +5,7 @@ import SecondHeader from "../component/SecondHeader";
 const SecondAnnouncement = () => {
   return (
     <div>
-        <SecondHeader isSecond={true}/>
+      <SecondHeader isSecond={true}/>
       <Announcement/>
     </div>
   );

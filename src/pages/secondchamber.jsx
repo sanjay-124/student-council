@@ -1,4 +1,4 @@
-import { useNavigate, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import React, { useState, useEffect } from "react";
@@ -18,7 +18,7 @@ function SecondChamber() {
       if (authUser) {
         setUser(authUser);
       } else {
-        navigate("/usersignup"); // Redirect to the signup page if not signed in
+        navigate("/usersignup");
       }
     });
 
@@ -26,10 +26,8 @@ function SecondChamber() {
   }, [navigate]);
 
   if (!user) {
-    return null; // Display loading state or redirect to login
+    return null;
   }
-
-  // Render your admin page content here
 
   return (
     <div className="bg-gradient-to-r from-purple-100 to-pink-100 min-h-screen">

@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { Component } from "react";
+import React from "react";
 import Footer from "../component/Footer";
 import ExecutiveHeader from "../component/ExecutiveHeader";
 

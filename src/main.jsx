@@ -48,7 +48,6 @@ function Apps() {
 
 const rootElement = document.getElementById("root");
 
-// Check if the root element exists before rendering
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(<Apps />);

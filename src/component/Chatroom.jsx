@@ -44,7 +44,6 @@ function ChatRoom() {
     <>
       <main className="container mx-auto p-4 max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6">Chat Room</h1>
-
         <div
           className="chat-area bg-white p-4 rounded-lg shadow-md h-96 overflow-y-auto mb-4"
           ref={chatAreaRef}

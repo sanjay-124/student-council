@@ -1,20 +1,11 @@
-/* eslint-disable no-unused-vars */
-import { useState } from "react";
 import "./App.css";
-import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import "firebase/compat/firestore"; // Include the firestore module
-import Header from "./component/Header";
-
-// import react router dom
+import "firebase/compat/firestore";
 import {
-  BrowserRouter,
-  Routes,
-  Route,
   createBrowserRouter,
   RouterProvider,
-  Link,
 } from "react-router-dom";
+
 import Home from "./Home.jsx";
 import UserFeedback from "./pages/userfeedback.jsx";
 import UserAboutus from "./pages/useraboutus.jsx";

@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { Component } from "react";
+import React from "react";
 import firebase from "firebase/compat/app";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -50,7 +49,6 @@ function UserFeedback() {
 
   return (
     <div>
-      {/* //In a component for a regular user page */}
       <ExecutiveHeader activePage="feedback"/>
       <div className="overflow-hidden py-2 px-6 lg:px-8">
         <div className="relative mx-auto max-w-xl">

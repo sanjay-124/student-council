@@ -19,11 +19,11 @@ const SecondHeader = ({
   const navigate = useNavigate();
   const handleLogout = () => {
     firebase.auth().signOut();
-    navigate("/usersignup"); // Redirect to the signup page after logout
+    navigate("/usersignup");
   };
 
   if (!isSecond) {
-    return null; // Don't render the component if isSecond is false
+    return null;
   }
 
   if (activePage === "adminevents") {
