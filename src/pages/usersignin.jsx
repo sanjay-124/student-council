@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const executives = ["finance@gmail.com", "studentaffairs@gamil.com", "operations@gmail.com", "president@gmail.com"];
 const secondchamber = ["sports@gmail.com", "arts@gmail.com", "community@gmail.com", "ib1@gmail.com", "ib2@gmail.com", "gr9@gmail.com", "gr10@gmail.com"];
 
-function UserSignup() {
+function UserSignin() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,7 +45,7 @@ function UserSignup() {
 
   return (
     <div>
-      <ExecutiveHeader activePage="signup" />
+      <ExecutiveHeader activePage="signin" />
       <div className="flex min-h-full flex-col justify-center py-12 sm:px-6">
         <ToastContainer
           position="top-center"
@@ -127,4 +127,4 @@ function UserSignup() {
   );
 };
 
-export default UserSignup;
+export default UserSignin;

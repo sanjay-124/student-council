@@ -19,7 +19,7 @@ const ExecutiveHeader = ({
 
   const handleLogout = () => {
     firebase.auth().signOut();
-    navigate("/usersignup");
+    navigate("/usersignin");
   };
 
   if (isAdmin) {
@@ -168,7 +168,7 @@ const ExecutiveHeader = ({
     { href: "/", label: "Home" },
     { href: "userfeedback", label: "Feedback" },
     { href: "usercontact", label: "Contact" },
-    { href: "usersignup", label: "Sign Up" },
+    { href: "usersignin", label: "Sign In" },
   ];
 
   return (

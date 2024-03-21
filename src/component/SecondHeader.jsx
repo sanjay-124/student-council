@@ -19,7 +19,7 @@ const SecondHeader = ({
   const navigate = useNavigate();
   const handleLogout = () => {
     firebase.auth().signOut();
-    navigate("/usersignup");
+    navigate("/usersignin");
   };
 
   if (!isSecond) {

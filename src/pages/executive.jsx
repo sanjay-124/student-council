@@ -19,7 +19,7 @@ function Executive() {
       if (authUser) {
         setUser(authUser);
       } else {
-        navigate("/usersignup");
+        navigate("/usersignin");
       }
     });
 

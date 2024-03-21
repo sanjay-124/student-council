@@ -18,7 +18,7 @@ function SecondChamber() {
       if (authUser) {
         setUser(authUser);
       } else {
-        navigate("/usersignup");
+        navigate("/usersignin");
       }
     });
 

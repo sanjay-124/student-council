@@ -10,7 +10,7 @@ import Home from "./Home.jsx";
 import UserFeedback from "./pages/userfeedback.jsx";
 import UserAboutus from "./pages/useraboutus.jsx";
 import UserContact from "./pages/usercontact.jsx";
-import UserSignup from "./pages/usersignup.jsx";
+import UserSignin from "./pages/usersignin.jsx";
 import UserAnnouncements from "./pages/userannouncements.jsx";
 import UserEvents from "./pages/userevents.jsx";
 import Executive from "./pages/executive.jsx";
@@ -41,8 +41,8 @@ const router = createBrowserRouter([
     element: <UserContact />,
   },
   {
-    path: "/usersignup",
-    element: <UserSignup />,
+    path: "/usersignin",
+    element: <UserSignin />,
   },
   {
     path: "/userannouncements",
