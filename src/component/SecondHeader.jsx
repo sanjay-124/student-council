@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import { useNavigate, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SecondHeader = ({
   activePage,
