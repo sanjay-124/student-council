@@ -19,10 +19,10 @@ function UserContact() {
                   Contact details
                 </h1>
                 <p className="mt-2 text-base text-gray-500">
-                  #4 & 20 Manchenahalli, <br />
-                  Yelahanka Bangalore - 560064, INDIA <br />
-                  info@cisb.org.in/enroll@cisb.org.in <br />
-                  +918067594444 | +91 9845150395.
+                  #4 & 20 abcdefgh, <br />
+                  abcdefghij abcdefgh - 123456, abcde <br />
+                  info@abcd.org.in/enroll@abcd.org.in <br />
+                  +1234567890 | +1234567890
                 </p>
               </div>
             </div>
