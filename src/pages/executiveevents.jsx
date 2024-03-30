@@ -155,10 +155,9 @@ function ExecutiveEvents() {
     try {
       const request = {
         calendarId: "primary",
-        timeMin: new Date().toISOString(),
         showDeleted: false,
-        singleEvents: true,
-        maxResults: 10,
+        singleEvents: true, // Set to false to include recurring events
+        maxResults: 100, // Increase or remove the limit to fetch more events
         orderBy: "startTime",
       };
       response = await window.gapi.client.calendar.events.list(request);
@@ -166,22 +165,26 @@ function ExecutiveEvents() {
       console.error("Error fetching events", err);
       return;
     }
-
+  
     const fetchedEvents = response.result.items;
     setEvents(fetchedEvents);
   };
 
   const createEvent = async () => {
+    // Calculate the end date by adding one day to the selected end date
+    const endDate = new Date(newEventEnd);
+    endDate.setDate(endDate.getDate() + 1);
+  
     const event = {
       summary: newEventTitle,
       start: {
         date: newEventStart.toISOString().split("T")[0], // Only the date part
       },
       end: {
-        date: newEventEnd.toISOString().split("T")[0], // Only the date part
+        date: endDate.toISOString().split("T")[0], // Only the date part
       },
     };
-
+  
     try {
       const request = await window.gapi.client.calendar.events.insert({
         calendarId: "primary",
